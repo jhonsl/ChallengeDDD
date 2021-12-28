@@ -123,8 +123,6 @@ v
 Fsrc/main/java/co/com/softka/usecase/objetivo/CrearObjetivoUseCase.java,1\b\1b743741093ba8e266eb3af5f80878dd16f52da8
 |
 Lsrc/main/java/co/com/softka/usecase/fabricacion/CrearFabricacionUseCase.java,a\d\ad525d766593a49ca05d240b6d9362c20fe4e925
-s
-Csrc/test/java/co/com/softka/challengeddd/usecase/CrearJefeTest.java,a\6\a6c538f331342400f8d0e1cd046f4ad89c7c6a36
 x
 Hsrc/main/java/co/com/softka/challengeddd/fabricación/values/Modelo.java,a\b\abf6a60e689b1a65ca25426342fcd7685205ef51
 t
