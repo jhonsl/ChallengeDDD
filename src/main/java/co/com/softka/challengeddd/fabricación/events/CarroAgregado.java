@@ -8,6 +8,7 @@ import co.com.softka.challengeddd.fabricación.values.Precio;
 
 public class CarroAgregado extends DomainEvent {
 
+
     private final IdCarro idCarro;
     private final Precio precio;
     private final CantidadDeLLantas cantidadDeLLantas;

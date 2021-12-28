@@ -37,19 +37,19 @@ public class AgregarAvionTest {
     void agregarAvion(){
 
         //arrange
-        IdFabricacion idFabricacion = IdFabricacion.of("QQQQQ");
-        IdAvion idAvion = IdAvion.of("xxxx");
+        IdFabricacion idFabricacion = IdFabricacion.of("sasasa");
+        IdAvion idAvion = IdAvion.of("mumumu");
         Precio precio = new Precio(80000000);
         CantidadDeAsientos cantidadDeAsientos = new CantidadDeAsientos(80);
         var command = new AgregarAvion(idFabricacion, idAvion, precio, cantidadDeAsientos);
         var usecase = new AgregarAvionUseCase();
 
         //act
-        when(repository.getEventsBy("QQQQQ")).thenReturn(events());
+        when(repository.getEventsBy("sasasa")).thenReturn(events());
         usecase.addRepository(repository);
 
         var events = UseCaseHandler.getInstance()
-                .setIdentifyExecutor(idAvion.value())
+                .setIdentifyExecutor(idFabricacion.value())
                 .syncExecutor(usecase, new RequestCommand<>(command))
                 .orElseThrow()
                 .getDomainEvents();
@@ -57,10 +57,10 @@ public class AgregarAvionTest {
         var event = (AvionAgregado)events.get(0);
 
         //assertions
-        Assertions.assertEquals("xxxx", event.getIdAvion().value());
+        Assertions.assertEquals("mumumu", event.getIdAvion().value());
         Assertions.assertEquals(80000000, event.getPrecio().value());
         Assertions.assertEquals(80, event.getCantidadDeAsientos().value());
 
-        Mockito.verify(repository).getEventsBy("QQQQQ");
+        Mockito.verify(repository).getEventsBy("sasasa");
     }
 }

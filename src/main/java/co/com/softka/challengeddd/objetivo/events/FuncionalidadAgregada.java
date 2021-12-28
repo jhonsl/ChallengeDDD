@@ -3,6 +3,9 @@ package co.com.softka.challengeddd.objetivo.events;
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.softka.challengeddd.objetivo.values.Descripcion;
 import co.com.softka.challengeddd.objetivo.values.IdFuncionalidad;
+import co.com.softka.challengeddd.objetivo.values.NuevaCaracteristica;
+
+import java.util.Set;
 
 public class FuncionalidadAgregada extends DomainEvent {
 
